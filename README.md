@@ -17,3 +17,8 @@ To empty the git repository, use the command,
 $ rm -rf .git
 $ git init .
 ```
+Apps are a good way to keep code organized, started by,
+```bash
+$ python manage.py startapp web
+```
+consists of a number of placeholder files for things like models, views, and tests.
