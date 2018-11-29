@@ -44,4 +44,6 @@ class NewVisitorTest(unittest.TestCase):
         # satisfied, she goes back to sleep
 
 if __name__ == "__main__":
+    # launch the unittest runner, which will automatically find test
+    # classes and methods in the file and run them
     unittest.main(warnings='ignore')
