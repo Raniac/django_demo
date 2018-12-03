@@ -13,6 +13,8 @@ from django.template.loader import render_to_string
 # unit tests make sure that refactoring is behavior preserving.
 # when refactoring, work on either the code or the tests, but not both at once.
 
+# only methods that begin with test_ will get run as tests
+
 class HomePageTest(TestCase):
     def test_root_url_resolves_to_home_page_view(self):
         found = resolve('/')
