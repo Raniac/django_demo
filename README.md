@@ -22,3 +22,5 @@ Apps are a good way to keep code organized, started by,
 $ python manage.py startapp web
 ```
 consists of a number of placeholder files for things like models, views, and tests.
+
+Before doing any refactoring, always do a commit.
