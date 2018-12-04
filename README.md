@@ -26,3 +26,5 @@ consists of a number of placeholder files for things like models, views, and tes
 Before doing any refactoring, always do a commit.
 
 To let Git notice that some files are moved, use **git mv** command.
+
+If something strange is going on with the FT's, it's always worth trying to upgrade Selenium.
