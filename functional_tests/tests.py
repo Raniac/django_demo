@@ -2,8 +2,9 @@ from selenium import webdriver
 import unittest
 from selenium.webdriver.common.keys import Keys
 import time
+from django.test import LiveServerTestCase
 
-class NewVisitorTest(unittest.TestCase):
+class NewVisitorTest(LiveServerTestCase):
 
     # only methods that begin with test_ will get run as tests
     
@@ -24,7 +25,7 @@ class NewVisitorTest(unittest.TestCase):
         # use it to open up a web page which we're expecting to be served from a local PC
         # Edith has heard about a cool new online to-do app
         # she goes to check out its homepage
-        self.browser.get('http://localhost:8000')
+        self.browser.get(self.live_server_url)
 
         # check by making a test assertion that the page has 'django' in its title
         # she notices the page title and header mention to-do lists
@@ -68,8 +69,3 @@ class NewVisitorTest(unittest.TestCase):
         # she visites the URL - her to-do list is still there
 
         # satisfied, she goes back to sleep
-
-if __name__ == "__main__":
-    # launch the unittest runner, which will automatically find test
-    # classes and methods in the file and run them
-    unittest.main(warnings='ignore')

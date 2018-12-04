@@ -24,3 +24,5 @@ $ python manage.py startapp web
 consists of a number of placeholder files for things like models, views, and tests.
 
 Before doing any refactoring, always do a commit.
+
+To let Git notice that some files are moved, use **git mv** command.
