@@ -6,9 +6,13 @@ from web.models import Item
 def home_page(request):
     if request.method == 'POST':
         Item.objects.create(text=request.POST['item_text'])
-        return redirect('/')
+        return redirect('/web/the-only-list-in-the-world/')
     
-    items = Item.objects.all()
-    return render(request, 'home.html', {'items': items})
+    # items = Item.objects.all()
+    return render(request, 'home.html')
     # the third argument of render function is a dictionary
     # which maps template variable names to their values
+
+def view_list(request):
+    items = Item.objects.all()
+    return render(request, 'list.html', {'items': items})
