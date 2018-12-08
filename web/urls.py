@@ -20,13 +20,13 @@ Including another URLconf
 #     url(r'^admin/', admin.site.urls),
 # ]
 
-from django.conf.urls import include, url
-from web import views as list_views
-from web import urls as list_urls
+from django.conf.urls import url
+from web import views
 
 # the captured text by regex will get passed to
 # the view as an argument
 urlpatterns = [
-    url(r'^$', list_views.home_page, name='home'),
-    url(r'^web/', include(list_urls)),
+    url(r'^new$', views.new_list, name='new_list'),
+    url(r'^(\d+)/$', views.view_list, name='view_list'),
+    url(r'^(\d+)/add_item$', views.add_item, name='add_item'),
 ]
